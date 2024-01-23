@@ -5,8 +5,11 @@ const jwt = require('jsonwebtoken');
  * 
  * Documentation: https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback
  */
-function createToken() {
-    
+
+// jwt.sign(payload, secretOrPrivateKey, [options, callback])
+const createToken = (req, res) => {
+    const { header, body } = req
+    const token = jwt.sign(body, authentication)
 }
 
 /**
